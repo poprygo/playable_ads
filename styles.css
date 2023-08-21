@@ -1,0 +1,61 @@
+#myVideo {
+    /* Position and size the video to take up the full width of the container */
+    width: 100%;
+    height: auto;
+}
+
+#continueCircle {
+    /* Styling for the continue circle; initially hidden */
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Creates a circular shape */
+    left: 920.72265625px; /* x coordinate to position the circle */
+    top: 640.78125px; /* y coordinate to position the circle */
+    cursor: pointer; /* Changes the cursor to a hand to indicate clickability */
+}
+
+#arrow-container {
+    /* Position the arrow container; initially hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#arrow {
+    /* Styling for the arrow; positioned according to the specified coordinates */
+    position: absolute;
+    left: 800.72265625px; /* x coordinate to position the arrow */
+    top: 666.78125px; /* y coordinate to position the arrow */
+    width: 100px; /* Sets the width of the arrow image */
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 0.5s ease-in-out; /* Adds a smooth transition effect for opacity changes */
+
+}
+
+/* Defines the moveArrow animation for moving the arrow left and right */
+@keyframes moveArrow {
+    0%, 100% {
+        left: 770.72265625px;
+        transition-timing-function: ease-in-out; /* Smooth easing at the start and end */
+    }
+    25% {
+        left: 790.72265625px;
+        transition-timing-function: ease-in-out;
+    }
+    50% {
+        left: 820.72265625px;
+        transition-timing-function: ease-in-out; /* Smooth easing at the middle */
+    }
+    75% {
+        left: 790.72265625px;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+#arrow-container.show-arrow #arrow {
+    /* Applies the moveArrow animation to the arrow when the "show-arrow" class is added to the container */
+    animation: moveArrow 1s linear infinite ; /* Parameters for the animation */
+}

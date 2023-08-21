@@ -1,0 +1,23 @@
+<!DOCTYPE html> <!-- Defines the document to be HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head> <!-- Container for meta information and links -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport properties for responsive design -->
+    <title>Playabale Ad</title> <!-- Sets the title of the web page, displayed in the browser's title bar or tab -->
+</head>
+<body> <!-- Container for the visible content of the HTML document -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling -->
+
+    <video id="myVideo" controls> <!-- Video player element with controls enabled; identified by id "myVideo" -->
+        <source src="phone_calling.mp4" type="video/mp4"> <!-- Specifies the source file and type for the video -->
+        Your browser does not support the video tag. <!-- Message displayed if the browser doesn't support the video element -->
+    </video>
+    
+    <div id="continueCircle"></div> <!-- Empty div for the "continue" circle; will be styled and controlled through CSS and JavaScript; identified by id "continueCircle" -->
+
+    <div id="arrow-container"> <!-- Container for the arrow image; identified by id "arrow-container" -->
+        <img id="arrow" src="arrow.png" alt="Click here"> <!-- Image element for the arrow; identified by id "arrow" -->
+    </div>
+    <script src="script.js"></script> <!-- Links to an external JavaScript file for functionality -->
+</body>
+</html>
